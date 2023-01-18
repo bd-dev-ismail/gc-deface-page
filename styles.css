@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 /* Main Section Style  */
 .main-section{
@@ -14,12 +14,12 @@
     background-size: cover;
     background-color: #000;
     width: 100vw;
-    height: 100vh;
+    height: auto;
 }
 .main-heading h3{
     text-align: center;
     font-size: 48px;
-    padding: 20px 0;
+    padding: 40px 0;
     color: red;
     font-family: 'Iceland', cursive;
 }
@@ -41,6 +41,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 40px 0;
 }
 .we-are span{
     font-size: 1.6rem;
@@ -54,7 +55,7 @@
 .we-are p {
     font-size: 1.2rem;
     font-family: 'Iceland', cursive;
-    margin-top: 4rem;
+    margin-top: 8rem;
 }
 .text-white{
     color: #fff;

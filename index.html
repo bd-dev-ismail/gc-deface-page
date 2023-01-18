@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CG Underground Force</title>
     <link rel="stylesheet" href="/styles.css" />
-    <link rel="shortcut icon" href="https://k.top4top.io/p_245729hpd1.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="https://k.top4top.io/p_245729hpd1.png"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +18,18 @@
       rel="stylesheet"
     />
   </head>
-  <body oncontextmenu="return false;">
+  <!-- oncontextmenu="return false;" -->
+  <body>
+    <audio id="playAudio" autoplay loop>
+      <source src="https://a.top4top.io/m_20037kc5j0.mp3" type="audio/mp3" />
+    </audio>
+    <iframe
+      src="https://a.top4top.io/m_20037kc5j0.mp3"
+      allow="autoplay"
+      style="display: none"
+      id="iframeAudio"
+    >
+    </iframe>
     <!-- Start Main Section  -->
     <div class="main-section">
       <div class="main-heading">
@@ -56,16 +71,26 @@
             ©Copyright 2023 || CG Underground Force || All Rights Reserve.
           </p>
           <!-- Background Music  -->
-          <audio
+          <!-- <audio
             src="https://a.top4top.io/m_20037kc5j0.mp3"
             autoplay
             loop
             controls
-          ></audio>
+          ></audio> -->
         </div>
       </div>
     </div>
     <!-- End Main Section  -->
-    <script src="/app.js"></script>
+    <script>
+      var isChrome =
+        /Chrome/.test(navigator.userAgent) &&
+        /Google Inc/.test(navigator.vendor);
+      if (!isChrome) {
+        $("#iframeAudio").remove();
+      } else {
+        $("#playAudio").remove(); // just to make sure that it will not have 2x audio in the background
+      }
+    </script>
+    <!-- <script src="/app.js"></script> -->
   </body>
 </html>
