@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cyber Gang Underground Force</title>
-    <link rel="stylesheet" href="/styles/styles.css" />
+
     <link
       rel="shortcut icon"
       href="https://k.top4top.io/p_245729hpd1.png"
@@ -17,6 +17,102 @@
       href="https://fonts.googleapis.com/css2?family=Iceland&family=Quicksand:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Global Css  */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Quicksand", sans-serif;
+        overflow-x: hidden;
+      }
+      /* Main Section Style  */
+      /* https://i.pinimg.com/originals/ca/82/12/ca82125c0ec71105aa02ee3730ecccbc.gif */
+      .main-section {
+        background-image: linear-gradient(
+            to bottom,
+            rgb(0 0 0 / 34%) 0%,
+            rgb(0 0 0 / 49%) 59%,
+            rgb(0 0 0 / 68%) 100%
+          ),
+          url("https://i.ibb.co/vC9fYPN/bg.gif");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #000;
+        width: 100vw;
+        height: auto;
+      }
+      .main-heading h3 {
+        text-align: center;
+        font-size: 48px;
+        padding: 80px 0;
+        color: red;
+        font-family: "Iceland", cursive;
+      }
+      .main-heading span {
+        font-family: "Iceland", cursive;
+      }
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .logo img {
+        width: 295px;
+        height: 290px;
+      }
+      /* Content Section Style  */
+      .content-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+      }
+      .we-are span {
+        font-size: 1.6rem;
+        font-weight: 400;
+        font-family: "Iceland", cursive;
+      }
+      .we-are p > span {
+        font-size: 1.2rem;
+        font-family: "Iceland", cursive;
+      }
+      .we-are p {
+        font-size: 1.2rem;
+        font-family: "Iceland", cursive;
+        margin-top: 8rem;
+      }
+      .text-white {
+        color: #fff;
+      }
+      .text-black {
+        color: #fff;
+      }
+      .text-red {
+        color: red;
+      }
+      .text-green {
+        color: #6aee63;
+      }
+      .text-cyan {
+        color: #00ffff;
+        font-size: 1.8rem;
+        padding: 20px 0;
+        text-align: center;
+      }
+      .text-orange {
+        color: #ff9d2b;
+      }
+      audio {
+        display: none;
+      }
+      @media (max-width: 575.98px) {
+        .text-cyan {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
   </head>
   <!-- oncontextmenu="return false;" -->
   <body>
@@ -38,7 +134,7 @@
         </h3>
       </div>
       <div class="logo">
-        <img src="/assets/removebg-logo.png" alt="" />
+        <img src="https://i.ibb.co/kgdcrnh/removebg-logo.png" alt="" />
       </div>
       <div class="content-section">
         <div class="we-are">
@@ -48,8 +144,12 @@
             <span class="text-red">Muslim Hacker</span>
           </h6>
           <h5 class="title text-cyan">
-            Stop the attacks on the Bangladesh border.Dont Try To Mess With
-            Bangladeshi Hackers.Shame On Your Justice!
+            <!-- Stop the attacks on the Bangladesh border.Dont Try To Mess With
+            Bangladeshi Hackers.Shame On Your Justice! -->
+            We are the ummah of Prophet Muhammad (ﷺ). Quran is our wealth.
+            <br />
+            Our backbone is the Qur'an. Quran teaches to respect <br />
+            everyone's religion.
           </h5>
           <div style="text-align: center">
             <span class="text-green"
@@ -78,6 +178,72 @@
       </div>
     </div>
     <!-- End Main Section  -->
-    <script src="/js/app.js"></script>
+    <script>
+      document.onkeypress = function (event) {
+        event = event || window.event;
+        return keyFunction(event);
+      };
+      document.onmousedown = function (event) {
+        event = event || window.event;
+        return keyFunction(event);
+      };
+      document.onkeydown = function (event) {
+        event = event || window.event;
+        return keyFunction(event);
+      };
+
+      //Disable right click script
+      var message = "Sorry, right-click has been disabled";
+
+      function clickIE() {
+        if (document.all) {
+          message;
+          return false;
+        }
+      }
+      function clickNS(e) {
+        if (document.layers || (document.getElementById && !document.all)) {
+          if (e.which == 2 || e.which == 3) {
+            message;
+            return false;
+          }
+        }
+      }
+      if (document.layers) {
+        document.captureEvents(Event.MOUSEDOWN);
+        document.onmousedown = clickNS;
+      } else {
+        document.onmouseup = clickNS;
+        document.oncontextmenu = clickIE;
+      }
+      document.oncontextmenu = new Function("return false");
+
+      function keyFunction(event) {
+        //"F12" key
+        if (event.keyCode == 123) {
+          return false;
+        }
+
+        if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+          return false;
+        }
+        //"J" key
+        if (event.ctrlKey && event.shiftKey && event.keyCode == 74) {
+          return false;
+        }
+        //"S" key
+        if (event.keyCode == 83) {
+          return false;
+        }
+        //"U" key
+        if (event.ctrlKey && event.keyCode == 85) {
+          return false;
+        }
+        //F5
+        if (event.keyCode == 116) {
+          return false;
+        }
+      }
+    </script>
   </body>
 </html>
